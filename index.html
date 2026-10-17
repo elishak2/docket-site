@@ -13,8 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-BsdkJjM5.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Cnvk4cDb.css">
+    <script type="module" crossorigin src="./assets/index-BjvHwU8j.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BF68iC-I.css">
   </head>
   <body>
     <div class="shell">
@@ -70,6 +70,34 @@
         <div class="plan-grid">
           <div class="panel">
             <div class="panel-head">
+              <h2>Courses</h2>
+              <span class="count-pill" id="course-count">0</span>
+            </div>
+            <div class="panel-body">
+              <form id="course-form" novalidate>
+                <label for="course-name">Add a course</label>
+                <div class="inline-form">
+                  <input
+                    type="text"
+                    id="course-name"
+                    placeholder="MATH 210"
+                    maxlength="40"
+                    autocomplete="off"
+                  />
+                  <button type="submit" class="secondary">Add</button>
+                </div>
+                <div class="form-error" id="course-error" role="alert"></div>
+              </form>
+              <ul class="course-list" id="course-list"></ul>
+              <div class="empty-note" id="course-empty">
+                No courses yet. Add each course once; then pick it from a
+                dropdown when you add assignments and lectures.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
               <h2>Assignments</h2>
               <span class="count-pill" id="assign-count">0</span>
             </div>
@@ -84,14 +112,10 @@
                 />
 
                 <label for="a-course">Course</label>
-                <input
-                  type="text"
-                  id="a-course"
-                  placeholder="MATH 210"
-                  list="course-list"
-                  autocomplete="off"
-                />
-                <datalist id="course-list"></datalist>
+                <select id="a-course"></select>
+                <div class="hint course-hint" hidden>
+                  Add your courses in the Courses box first, then pick one here.
+                </div>
 
                 <div class="row2">
                   <div>
@@ -153,13 +177,7 @@
                   </div>
                   <div>
                     <label for="b-course">Course</label>
-                    <input
-                      type="text"
-                      id="b-course"
-                      placeholder="ASRM 401"
-                      list="course-list"
-                      autocomplete="off"
-                    />
+                    <select id="b-course"></select>
                   </div>
                 </div>
 
