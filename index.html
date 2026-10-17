@@ -13,8 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-CqRjRQCF.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CW_UsUR7.css">
+    <script type="module" crossorigin src="./assets/index-DlN0tbHs.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BAdk9qha.css">
   </head>
   <body>
     <div class="shell">
@@ -31,8 +31,34 @@
 
       <div id="warn-banner" class="warn-banner"></div>
 
-      <div class="layout">
-        <div>
+      <div class="tabs" role="tablist" aria-label="Sections">
+        <button
+          type="button"
+          role="tab"
+          id="tab-button-calendar"
+          aria-controls="tab-calendar"
+          data-tab="calendar"
+        >
+          Calendar
+        </button>
+        <button
+          type="button"
+          role="tab"
+          id="tab-button-plan"
+          aria-controls="tab-plan"
+          data-tab="plan"
+        >
+          Add &amp; edit
+        </button>
+      </div>
+
+      <div
+        id="tab-plan"
+        role="tabpanel"
+        aria-labelledby="tab-button-plan"
+        hidden
+      >
+        <div class="plan-grid">
           <div class="panel">
             <div class="panel-head">
               <h2>Assignments</h2>
@@ -225,24 +251,29 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="panel">
-          <div class="panel-head">
-            <h2>This week's plan</h2>
-            <div class="week-nav">
-              <button class="secondary" id="wk-prev" aria-label="Previous week">
-                &larr;
-              </button>
-              <span class="wk-label" id="wk-label"></span>
-              <button class="secondary" id="wk-next" aria-label="Next week">
-                &rarr;
-              </button>
-            </div>
+      <div
+        class="panel"
+        id="tab-calendar"
+        role="tabpanel"
+        aria-labelledby="tab-button-calendar"
+      >
+        <div class="panel-head">
+          <h2>Your plan</h2>
+          <div class="week-nav">
+            <button class="secondary" id="wk-prev" aria-label="Previous week">
+              &larr;
+            </button>
+            <span class="wk-label" id="wk-label"></span>
+            <button class="secondary" id="wk-next" aria-label="Next week">
+              &rarr;
+            </button>
           </div>
-          <div class="legend" id="legend"></div>
-          <div class="grid-wrap">
-            <div class="week-grid" id="week-grid"></div>
-          </div>
+        </div>
+        <div class="legend" id="legend"></div>
+        <div class="grid-wrap">
+          <div class="week-grid" id="week-grid"></div>
         </div>
       </div>
 
