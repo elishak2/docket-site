@@ -13,8 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-DL3S8IRT.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DffnMgXA.css">
+    <script type="module" crossorigin src="./assets/index-MuUR8Ke6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C6lmanuh.css">
   </head>
   <body>
     <div class="shell">
@@ -65,6 +65,15 @@
           data-tab="calendar"
         >
           Calendar
+        </button>
+        <button
+          type="button"
+          role="tab"
+          id="tab-button-progress"
+          aria-controls="tab-progress"
+          data-tab="progress"
+        >
+          Progress
         </button>
         <button
           type="button"
@@ -467,6 +476,47 @@
           <div class="today-summary" id="today-summary" role="status"></div>
           <ul class="today-list" id="today-list"></ul>
           <div class="empty-note" id="today-next"></div>
+        </div>
+      </div>
+
+      <div
+        class="panel"
+        id="tab-progress"
+        role="tabpanel"
+        aria-labelledby="tab-button-progress"
+        hidden
+      >
+        <div class="panel-head">
+          <h2>Progress</h2>
+        </div>
+        <div class="panel-body">
+          <div class="stat-row">
+            <div class="stat">
+              <div class="stat-number" id="progress-current"></div>
+              <div class="stat-label">Current streak</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" id="progress-best"></div>
+              <div class="stat-label">Best streak</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" id="progress-week"></div>
+              <div class="stat-label">Studied this week</div>
+            </div>
+          </div>
+          <div class="today-streak" id="progress-streak-note"></div>
+
+          <h3 class="progress-heading">This week by course</h3>
+          <ul class="progress-courses" id="progress-courses"></ul>
+
+          <h3 class="progress-heading">Finished study blocks</h3>
+          <div id="progress-days"></div>
+          <div class="empty-note" id="progress-empty"></div>
+          <p class="progress-footnote">
+            Time you log by hand with the +30 min buttons has no day attached,
+            so it isn't counted here. Streaks start from the day the app first
+            recorded one.
+          </p>
         </div>
       </div>
 
