@@ -13,8 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-CqKc9mE4.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-vg0uYndj.css">
+    <script type="module" crossorigin src="./assets/index-CDA1Xq9A.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Du1gNvUZ.css">
   </head>
   <body>
     <div class="shell">
@@ -104,44 +104,6 @@
         <div class="plan-grid">
           <div class="panel">
             <div class="panel-head">
-              <h2>Courses</h2>
-              <span class="count-pill" id="course-count">0</span>
-            </div>
-            <div class="panel-body">
-              <form id="course-form" novalidate>
-                <label for="course-name">Add a course</label>
-                <div class="inline-form">
-                  <input
-                    type="text"
-                    id="course-name"
-                    placeholder="MATH 210"
-                    maxlength="40"
-                    autocomplete="off"
-                  />
-                  <button type="submit" class="secondary">Add</button>
-                </div>
-                <div class="form-error" id="course-error" role="alert"></div>
-              </form>
-              <ul class="course-list" id="course-list"></ul>
-              <div class="empty-note" id="course-empty">
-                No courses yet. Add each course once; then pick it from a
-                dropdown when you add assignments and lectures.
-              </div>
-              <div class="submit-row" id="archive-all-row">
-                <button type="button" class="secondary" id="archive-all">
-                  Archive all courses (new semester)
-                </button>
-              </div>
-              <div class="hint" id="course-status" role="status"></div>
-              <div id="archived-section" hidden>
-                <h3 class="subhead">Archived courses</h3>
-                <ul class="course-list" id="archived-list"></ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="panel">
-            <div class="panel-head">
               <h2>Assignments</h2>
               <span class="count-pill" id="assign-count">0</span>
             </div>
@@ -169,7 +131,8 @@
                 <label for="a-course">Course</label>
                 <select id="a-course"></select>
                 <div class="hint course-hint" hidden>
-                  Add your courses in the Courses box first, then pick one here.
+                  Add your courses in the Courses box lower on this page first,
+                  then pick one here.
                 </div>
 
                 <div class="row2">
@@ -388,6 +351,44 @@
               <label for="study-start">Start study sessions at</label>
               <input type="time" id="study-start" required />
               <div class="hint" id="study-start-note"></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h2>Courses</h2>
+              <span class="count-pill" id="course-count">0</span>
+            </div>
+            <div class="panel-body">
+              <form id="course-form" novalidate>
+                <label for="course-name">Add a course</label>
+                <div class="inline-form">
+                  <input
+                    type="text"
+                    id="course-name"
+                    placeholder="MATH 210"
+                    maxlength="40"
+                    autocomplete="off"
+                  />
+                  <button type="submit" class="secondary">Add</button>
+                </div>
+                <div class="form-error" id="course-error" role="alert"></div>
+              </form>
+              <ul class="course-list" id="course-list"></ul>
+              <div class="empty-note" id="course-empty">
+                No courses yet. Add each course once; then pick it from a
+                dropdown when you add assignments and lectures.
+              </div>
+              <div class="submit-row" id="archive-all-row">
+                <button type="button" class="secondary" id="archive-all">
+                  Archive all courses (new semester)
+                </button>
+              </div>
+              <div class="hint" id="course-status" role="status"></div>
+              <div id="archived-section" hidden>
+                <h3 class="subhead">Archived courses</h3>
+                <ul class="course-list" id="archived-list"></ul>
+              </div>
             </div>
           </div>
         </div>
