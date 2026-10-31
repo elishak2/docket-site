@@ -13,8 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-BwAwGfxO.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Cb311_j_.css">
+    <script type="module" crossorigin src="./assets/index-CUvAvE1l.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C4XQKYi-.css">
   </head>
   <body>
     <div class="shell">
@@ -59,6 +59,15 @@
           data-tab="today"
         >
           Today
+        </button>
+        <button
+          type="button"
+          role="tab"
+          id="tab-button-focus"
+          aria-controls="tab-focus"
+          data-tab="focus"
+        >
+          Focus
         </button>
         <button
           type="button"
@@ -511,9 +520,44 @@
         <div class="panel-body">
           <div class="today-streak" id="today-streak"></div>
 
+          <div class="today-summary" id="today-summary" role="status"></div>
+          <ul class="today-list" id="today-list"></ul>
+          <div class="skip-status" id="skip-status" hidden>
+            <span id="skip-text"></span>
+            <button type="button" class="ghost" id="undo-skip">Undo</button>
+          </div>
+          <div class="empty-note" id="today-next"></div>
+          <div class="rest-day">
+            <button
+              type="button"
+              class="secondary"
+              id="rest-day-button"
+            ></button>
+            <div class="hint" id="rest-day-note"></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="panel"
+        id="tab-focus"
+        role="tabpanel"
+        aria-labelledby="tab-button-focus"
+        hidden
+      >
+        <div class="panel-head">
+          <h2>Focus</h2>
+        </div>
+        <div class="panel-body">
           <div class="focus" id="focus">
             <div id="focus-idle">
-              <label for="focus-minutes">Focus timer (minutes)</label>
+              <p class="panel-intro">
+                The Pomodoro technique: 25 minutes of focus, then a 5-minute
+                break. After four rounds, take a 15-minute break. The Focus
+                button on a study block in Today splits that block into rounds.
+              </p>
+              <button type="button" id="focus-pomodoro">Start Pomodoro</button>
+              <label for="focus-minutes">Or a single timer (minutes)</label>
               <div class="inline-form">
                 <input
                   type="number"
@@ -531,7 +575,9 @@
             </div>
             <div id="focus-running" hidden>
               <div class="focus-label" id="focus-label"></div>
+              <div class="focus-phase" id="focus-phase"></div>
               <div class="focus-time" id="focus-time" role="timer"></div>
+              <div class="focus-next" id="focus-next"></div>
               <button type="button" class="secondary" id="focus-stop">
                 Stop
               </button>
@@ -548,21 +594,6 @@
             >
               Mark block done
             </button>
-          </div>
-          <div class="today-summary" id="today-summary" role="status"></div>
-          <ul class="today-list" id="today-list"></ul>
-          <div class="skip-status" id="skip-status" hidden>
-            <span id="skip-text"></span>
-            <button type="button" class="ghost" id="undo-skip">Undo</button>
-          </div>
-          <div class="empty-note" id="today-next"></div>
-          <div class="rest-day">
-            <button
-              type="button"
-              class="secondary"
-              id="rest-day-button"
-            ></button>
-            <div class="hint" id="rest-day-note"></div>
           </div>
         </div>
       </div>
