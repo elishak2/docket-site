@@ -13,8 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-BJDWN6wm.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DD6vvF7d.css">
+    <script type="module" crossorigin src="./assets/index-Dw_8c-KP.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-tWIHchGx.css">
   </head>
   <body>
     <div class="shell">
@@ -94,7 +94,7 @@
           aria-controls="tab-routine"
           data-tab="routine"
         >
-          Sleep &amp; exercise
+          Habits
         </button>
         <button
           type="button"
@@ -437,9 +437,39 @@
         hidden
       >
         <div class="plan-grid">
+          <div class="panel habit-panel">
+            <div class="panel-head">
+              <h2>Daily habits</h2>
+              <span class="today-date" id="habit-date"></span>
+            </div>
+            <div class="panel-body">
+              <ul class="habit-list" id="habit-list"></ul>
+              <div class="form-error" id="habit-error" role="alert"></div>
+              <p class="hint">
+                Tick a habit for today. Tap a dot to fix a day you forgot. Sleep
+                also takes the hours you slept. Exercise ticks itself on days
+                you mark a workout done.
+              </p>
+              <form id="habit-form" novalidate>
+                <label for="habit-name">Add a habit</label>
+                <div class="inline-form">
+                  <input
+                    type="text"
+                    id="habit-name"
+                    placeholder="Drink water"
+                    maxlength="30"
+                    autocomplete="off"
+                  />
+                  <button type="submit" class="secondary">Add</button>
+                </div>
+                <div class="form-error" id="habit-add-error" role="alert"></div>
+              </form>
+            </div>
+          </div>
+
           <div class="panel sleep-panel">
             <div class="panel-head">
-              <h2>Sleep</h2>
+              <h2>Sleep settings</h2>
             </div>
             <div class="panel-body">
               <p class="panel-intro">
@@ -467,7 +497,7 @@
 
           <div class="panel">
             <div class="panel-head">
-              <h2>Exercise</h2>
+              <h2>Exercise settings</h2>
             </div>
             <div class="panel-body">
               <div class="row2">
@@ -527,6 +557,11 @@
             <button type="button" class="ghost" id="undo-skip">Undo</button>
           </div>
           <div class="empty-note" id="today-next"></div>
+          <div class="today-habits">
+            <h3 class="progress-heading">Today's habits</h3>
+            <ul class="habit-list" id="today-habit-list"></ul>
+            <div class="form-error" id="today-habit-error" role="alert"></div>
+          </div>
           <div class="rest-day">
             <button
               type="button"
