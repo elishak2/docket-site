@@ -13,8 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-Bk0dYfHa.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BNty5hS2.css">
+    <script type="module" crossorigin src="./assets/index-C0v_rs7r.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Cb311_j_.css">
   </head>
   <body>
     <div class="shell">
@@ -510,6 +510,45 @@
         </div>
         <div class="panel-body">
           <div class="today-streak" id="today-streak"></div>
+
+          <div class="focus" id="focus">
+            <div id="focus-idle">
+              <label for="focus-minutes">Focus timer (minutes)</label>
+              <div class="inline-form">
+                <input
+                  type="number"
+                  id="focus-minutes"
+                  min="1"
+                  max="180"
+                  step="1"
+                  value="25"
+                />
+                <button type="button" class="secondary" id="focus-start">
+                  Start timer
+                </button>
+              </div>
+              <div class="form-error" id="focus-error" role="alert"></div>
+            </div>
+            <div id="focus-running" hidden>
+              <div class="focus-label" id="focus-label"></div>
+              <div class="focus-time" id="focus-time" role="timer"></div>
+              <button type="button" class="secondary" id="focus-stop">
+                Stop
+              </button>
+            </div>
+            <div class="focus-message" id="focus-message" role="status"></div>
+            <button type="button" class="small" id="focus-silence" hidden>
+              Stop sound
+            </button>
+            <button
+              type="button"
+              class="secondary small"
+              id="focus-mark-done"
+              hidden
+            >
+              Mark block done
+            </button>
+          </div>
           <div class="today-summary" id="today-summary" role="status"></div>
           <ul class="today-list" id="today-list"></ul>
           <div class="skip-status" id="skip-status" hidden>
