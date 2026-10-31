@@ -13,8 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-CqYhC_24.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-C4XQKYi-.css">
+    <script type="module" crossorigin src="./assets/index-BJDWN6wm.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DD6vvF7d.css">
   </head>
   <body>
     <div class="shell">
@@ -583,11 +583,36 @@
             <div id="focus-running" hidden>
               <div class="focus-label" id="focus-label"></div>
               <div class="focus-phase" id="focus-phase"></div>
-              <div class="focus-time" id="focus-time" role="timer"></div>
+              <div class="focus-dial" id="focus-dial">
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+                  <circle class="dial-track" cx="50" cy="50" r="45"></circle>
+                  <circle
+                    class="dial-progress"
+                    id="focus-ring"
+                    cx="50"
+                    cy="50"
+                    r="45"
+                  ></circle>
+                </svg>
+                <div class="focus-time" id="focus-time" role="timer"></div>
+              </div>
               <div class="focus-next" id="focus-next"></div>
-              <button type="button" class="secondary" id="focus-stop">
-                Stop
-              </button>
+              <div class="focus-actions">
+                <button type="button" class="secondary" id="focus-stop">
+                  Stop
+                </button>
+                <button type="button" class="secondary" id="focus-full">
+                  Full-screen timer
+                </button>
+                <button
+                  type="button"
+                  class="secondary"
+                  id="focus-exit-full"
+                  hidden
+                >
+                  Exit full screen
+                </button>
+              </div>
             </div>
             <div class="focus-message" id="focus-message" role="status"></div>
             <button type="button" class="small" id="focus-silence" hidden>
