@@ -48,8 +48,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-BUPxvdwG.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DeX_FFnQ.css">
+    <script type="module" crossorigin src="./assets/index-BSi6zrwX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CR-6DPKU.css">
   </head>
   <body>
     <div class="shell">
@@ -113,6 +113,15 @@
           data-tab="calendar"
         >
           Calendar
+        </button>
+        <button
+          type="button"
+          role="tab"
+          id="tab-button-planner"
+          aria-controls="tab-planner"
+          data-tab="planner"
+        >
+          Planner
         </button>
         <button
           type="button"
@@ -1072,6 +1081,36 @@
             Apple Calendar, Google Calendar or Outlook.
           </div>
         </div>
+      </div>
+
+      <div
+        class="panel"
+        id="tab-planner"
+        role="tabpanel"
+        aria-labelledby="tab-button-planner"
+        hidden
+      >
+        <div class="panel-head">
+          <h2>Weekly planner</h2>
+          <div class="week-nav">
+            <button
+              class="secondary"
+              id="planner-prev"
+              aria-label="Previous week"
+            >
+              &larr;
+            </button>
+            <span class="wk-label" id="planner-label"></span>
+            <button class="secondary" id="planner-next" aria-label="Next week">
+              &rarr;
+            </button>
+          </div>
+        </div>
+        <div class="hint">
+          Each day lists what is due that day, like a paper planner. Add or
+          change assignments in the Add &amp; edit tab.
+        </div>
+        <ol class="planner-days" id="planner-days"></ol>
       </div>
 
       <footer class="note">
